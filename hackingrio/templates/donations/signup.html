@@ -1,0 +1,12 @@
+{% extends 'search/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container rounded">
+    </div>
+{% endblock %}
+{% block script %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.js" ></script>
+    <script>
+        $('#search_field').mask('9999.999.999999-9');
+    </script>
+{% endblock %}
