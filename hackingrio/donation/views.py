@@ -19,6 +19,18 @@ def donation(request):
             donation = form.save(commit=False)
             donation.doado_por = user
             donation.save()
+
+        beneficiarios = Beneficiary.objects.all()
+
+        doacao_distribuida = donation.valor_doado / len(beneficiarios)
+        
+        for beneficiario in beneficiarios:
+            DonatedBeneficiary.objects.create(doacao = donation,valor_doado_ao_beneficiario = doacao_distribuida,beneficiario = beneficiario,)
+
+
+
+
+
   # return redirect('board_topics', pk=board.pk)  # TODO: redirect to the created topic page
     else:
         form = DonationForm()
