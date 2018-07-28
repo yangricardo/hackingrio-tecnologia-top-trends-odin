@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['localhost','127.0.0.1','0.0.0.0']
 # Application definition
 
 INSTALLED_APPS = [
+    'donation.apps.DonationConfig',
     'widget_tweaks',
     'django.contrib.admin',
     'django.contrib.auth',
