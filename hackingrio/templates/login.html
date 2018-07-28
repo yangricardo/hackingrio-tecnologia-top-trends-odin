@@ -1,22 +1,27 @@
 {% extends 'accounts/base_accounts.html' %}
 
-{% block title %}Sign up{% endblock %}
+{% block title %}Entrar para o Hacking{% endblock %}
 
 {% block content %}
   <div class="row justify-content-center">
-    <div class="col-lg-8 col-md-10 col-sm-12">
+    <div class="col-lg-4 col-md-6 col-sm-8">
       <div class="card">
         <div class="card-body">
-          <h3 class="card-title">Sign up</h3>
+          <h3 class="card-title">Entrar</h3>
           <form method="post" novalidate>
             {% csrf_token %}
             {% include 'includes/form.html' %}
-            <button type="submit" class="btn btn-primary btn-block">Create an account</button>
+            <button type="submit" class="btn btn-primary btn-block">Entrar</button>
           </form>
         </div>
         <div class="card-footer text-muted text-center">
-            Already have an account? <a href="#">Log in</a>
+          Novo ao Hacking? <a href="{% url 'signup' %}">Cadastrar</a>
         </div>
+      </div>
+      <div class="text-center py-2">
+        <small>
+          
+        </small>
       </div>
     </div>
   </div>
