@@ -12,21 +12,21 @@ class Beneficiary(models.Model):
 
 class Donation(models.Model):
 
-    donated_by = models.ForeignKey(User, on_delete=models.DO_NOTHING)
-    value = models.DecimalField(max_digits=10, decimal_places=2 )
-    date = models.DateTimeField(auto_now=True, auto_now_add=False)
+    doado_por = models.ForeignKey(User, on_delete=models.DO_NOTHING)
+    valor_doado = models.DecimalField(max_digits=10, decimal_places=2 )
+    data = models.DateTimeField(auto_now=True, auto_now_add=False)
 
     def __str__(self):
-        return str(self.value)
+        return str(self.valor_doado)
 
 
 # Create your models here.
 class DonatedBeneficiary(models.Model):
 
-    donation = models.ForeignKey(Donation,  on_delete=models.DO_NOTHING)
-    value = models.DecimalField(max_digits=10, decimal_places=2)
-    beneficiary = models.ForeignKey(Beneficiary,  on_delete=models.DO_NOTHING)
+    doacao = models.ForeignKey(Donation,  on_delete=models.DO_NOTHING)
+    valor_doado_ao_beneficiario = models.DecimalField(max_digits=10, decimal_places=2)
+    beneficiario = models.ForeignKey(Beneficiary,  on_delete=models.DO_NOTHING)
 
     def __str__(self):
-        return str(self.value)
+        return str(self.valor_doado_ao_beneficiario)
 

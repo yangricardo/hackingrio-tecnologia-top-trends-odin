@@ -10,8 +10,8 @@ from .models import DonatedBeneficiary, Donation
 class DonationForm(forms.ModelForm):
 
     class Meta:
-        model = DonatedBeneficiary
-        fields = ['donated_by', 'value']
+        model = Donation
+        fields = ['valor_doado']
 
 
 

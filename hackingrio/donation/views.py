@@ -17,13 +17,14 @@ def donation(request):
         form = DonationForm(request.POST)
         if form.is_valid():
             donation = form.save(commit=False)
-            donation.donated_by = user
+            donation.doado_por = user
             donation.save()
-
-            # return redirect('board_topics', pk=board.pk)  # TODO: redirect to the created topic page
+  # return redirect('board_topics', pk=board.pk)  # TODO: redirect to the created topic page
     else:
         form = DonationForm()
     return render(request, 'donation.html',  {'form': form})
+
+
 
 def signup(request):
     if request.method == 'POST':
