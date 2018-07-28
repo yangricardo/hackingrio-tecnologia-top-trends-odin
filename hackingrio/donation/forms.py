@@ -2,6 +2,18 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
+from django import forms
+
+from .models import DonatedBeneficiary, Donation
+
+
+class DonationForm(forms.ModelForm):
+
+    class Meta:
+        model = DonatedBeneficiary
+        fields = ['donated_by', 'value']
+
+
 
 class SignUpForm(UserCreationForm):
     nome = forms.CharField(max_length=30, required=False, help_text='Nome')

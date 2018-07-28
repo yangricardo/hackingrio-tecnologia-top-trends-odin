@@ -9,6 +9,10 @@ def home(request):
 
     return render(request, 'home.html', )
 
+def donation(request):
+
+    return render(request, 'donation.html', )
+
 def signup(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
