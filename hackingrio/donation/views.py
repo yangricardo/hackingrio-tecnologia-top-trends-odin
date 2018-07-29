@@ -37,14 +37,14 @@ def donation(request):
 
         doacao_distribuida = donation.valor_doado / len(beneficiarios)
         
+        beneficiados = []
+
         for beneficiario in beneficiarios:
-            DonatedBeneficiary.objects.create(doacao = donation,valor_doado_ao_beneficiario = doacao_distribuida,beneficiario = beneficiario,)
+            beneficiado = DonatedBeneficiary.objects.create(doacao = donation,valor_doado_ao_beneficiario = doacao_distribuida,beneficiario = beneficiario,)
+            beneficiados.append(beneficiado)
 
+        return render(request, 'donation.html',  {'form': form,'beneficiados':beneficiados})
 
-
-
-
-  # return redirect('board_topics', pk=board.pk)  # TODO: redirect to the created topic page
     else:
         form = DonationForm()
     return render(request, 'donation.html',  {'form': form})
