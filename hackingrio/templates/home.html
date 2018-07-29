@@ -2,29 +2,32 @@
 {% load static %}
 
 {% block content %}
-<div class="row">
-  <div class="col-lg-6 portfolio-item">
-    <div class="card h-100">
-      <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-      <div class="card-body">
-        <h4 class="card-title">
-          <a href="#">Project One</a>
-        </h4>
-        <p class="card-text">Clique aqui para fazer uma doação.</p>
+{% if user.is_authenticated %}
+<div class="container">
+
+  <div class="row">
+    <div class="col-lg-6 portfolio-item">
+      <div class="card h-100">
+        <a href="{% url 'donate' %}"><img class="card-img-top" src="{% static 'img/doações-novo-rumo.jpg' %}" alt=""></a>
+        <div class="card-body ">
+          <p class="card-text center">Clique aqui para fazer uma doação.</p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col-lg-6 portfolio-item">
-    <div class="card h-100">
-      <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-      <div class="card-body">
-        <h4 class="card-title">
-          <a href="#">Project Two</a>
-        </h4>
-        <p class="card-text">Clique aqui para ver seu histórico de doações.</p>
+    <div class="col-lg-6 portfolio-item">
+      <div class="card h-100">
+        <a href="{% url 'historic' %}"><img class="card-img-top" src="{% static 'img/14117.jpg' %}" alt=""></a>
+        <div class="card-body center">
+          <p class="card-text">Clique aqui para ver seu histórico de doações.</p>
+        </div>
       </div>
     </div>
   </div>
 </div>
+{% else %}
+<div class="reset">
+  <img src="{% static 'img/w8ldgb27j4g8sw0wc.jpg' %}">
+</div>
+{% endif %}
 
 {% endblock %}
