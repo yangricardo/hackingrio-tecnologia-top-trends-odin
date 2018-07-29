@@ -1,5 +1,5 @@
 Nome da solução: CrowdEducation
-Time: odin
+Time: Odin
 
 
 É um fato que no Brasil não existe a cultura de adquirir seguro de vida/previdência, entretanto, com as últimas discussões acerca do cenário previdenciário social, quem garante que quando chegar a sua vez, você será suprido pelo governo? Hoje, dos 59% brasileiros que investem, 61% alocam o dinheiro em poupança, que sabemos que é um instrumento de estagnação financeira, então, por que não pensar na previdência privada? E por que não ajudar quem ainda nem sabe que precisa disso?

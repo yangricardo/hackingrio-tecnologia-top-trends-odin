@@ -8,6 +8,10 @@ body {
   color: #455d7a;
 }
 
+p {
+	text-align: justify;
+}
+
 .container-box { 
   margin-top: 8%;
 }
