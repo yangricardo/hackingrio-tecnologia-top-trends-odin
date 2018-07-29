@@ -16,6 +16,14 @@ def historic(request):
     return render(request, 'historic.html', {'doacoes':doacoes})
 
 
+def beneficiaries(request):
+    doacoes = DonatedBeneficiary.objects.filter(doacao__doado_por=request.user)
+    
+    beneficiarios = list( set( d.beneficiario for d in doacoes ) )
+
+    return render(request, 'beneficiary.html', {'beneficiarios':beneficiarios})
+
+
 
 def donation(request):
     if request.method == 'POST':

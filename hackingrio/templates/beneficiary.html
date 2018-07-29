@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container-box">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Idade</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for beneficiario in beneficiarios %}
+      <tr>
+        <th scope="row">{{ forloop.counter }}</th>
+        <td>{{beneficiario.nome}}</td>
+        <td>{{beneficiario.idade}}</td>
+      </tr>
+      {% endfor %}
+</div>
+{% endblock %}
