@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container-box">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Valor revertido</th>
+        <th scope="col">Data</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for doacao in doacoes %}
+      <tr>
+        <th scope="row">{{ forloop.counter }}</th>
+        <td>{{doacao.beneficiario.nome}}</td>
+        <td>{{doacao.valor_doado_ao_beneficiario}}</td>
+        <td>{{doacao.doacao.data}}</td>
+      </tr>
+      {% endfor %}
+</div>
+{% endblock %}

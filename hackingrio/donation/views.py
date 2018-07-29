@@ -11,13 +11,18 @@ def home(request):
 
     return render(request, 'home.html', )
 
+def historic(request):
+    doacoes = DonatedBeneficiary.objects.filter(doacao__doado_por=request.user)
+    return render(request, 'historic.html', {'doacoes':doacoes})
+
+
+
 def donation(request):
-    user = User.objects.first() 
     if request.method == 'POST':
         form = DonationForm(request.POST)
         if form.is_valid():
             donation = form.save(commit=False)
-            donation.doado_por = user
+            donation.doado_por = request.user
             donation.save()
 
         beneficiarios = Beneficiary.objects.all()

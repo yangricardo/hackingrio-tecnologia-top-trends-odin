@@ -3,8 +3,17 @@
   font-family: 'Peralta', cursive;
 } */
 
-.portfolio-item {
+body {
+  background-color: #fff;
+  color: #455d7a;
+}
+
+.container-box { 
   margin-top: 8%;
+}
+
+.portfolio-item {
+  margin-top: 15%;
   margin-bottom: 25%;
 }
 
@@ -12,4 +21,9 @@ footer {
   bottom:0;
   position:absolute;
   width:100%;
+}
+
+.bg-color {
+  background-color: #fff;
+  color: #455d7a;
 }

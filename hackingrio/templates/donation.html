@@ -1,13 +1,12 @@
 {% extends 'base.html' %}
 
-{% block breadcrumb %}
-  <li class="breadcrumb-item active">Doação</li>
-{% endblock %}
 
 {% block content %}
-<form method="post" novalidate>
-    {% csrf_token %}
-    {% include 'includes/form.html' %}
-    <button type="submit" class="btn btn-success">Doar</button>
-</form>
+<div class="container-box">
+  <form method="post" novalidate>
+      {% csrf_token %}
+      {% include 'includes/form.html' %}
+      <button type="submit" class="btn btn-success">Doar</button>
+  </form>
+</div>
 {% endblock %}
