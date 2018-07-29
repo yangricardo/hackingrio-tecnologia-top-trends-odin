@@ -2,3 +2,14 @@
 .navbar-brand {
   font-family: 'Peralta', cursive;
 } */
+
+.portfolio-item {
+  margin-top: 8%;
+  margin-bottom: 25%;
+}
+
+footer {
+  bottom:0;
+  position:absolute;
+  width:100%;
+}
