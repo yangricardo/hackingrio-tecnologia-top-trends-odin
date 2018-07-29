@@ -25,9 +25,34 @@
   </div>
 </div>
 {% else %}
-<div class="reset">
-  <img src="{% static 'img/w8ldgb27j4g8sw0wc.jpg' %}">
-</div>
+  <div class="container">
+    <div class="row">
+                <div class="carousel-inner ">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="{% static 'img/crowd.jpg' %}"  alt="">
+                  </div>
+                </div>
+        <div class="col-lg-6 portfolio-item-2">
+          <h1> Quem somos?</h1>
+          <p>Nós somos uma startup com uma única funcão: ajudar a melhorar a educação financeira no Brasil. Nessa plataforma, você
+            poderá ajudar a população mais carente do país, mas não é só isso: através dela, você também estará contribuindo para
+            que ele adquira
+            <b>consciência financeira</b>.
+          </p>
+      
+      
+        </div>
+        <div class="col-lg-6 portfolio-item-2">
+          <h1> Como funciona?</h1>
+          <p>Todas as doações são destinadas para adolescentes de comunidades de baixa renda que acabaram de concluir o ensino médio.
+            Entretanto, para que eles possam ter acesso à este benefício, precisaram realizar um curso de educação financeira,
+            que será fornecido por nós. Com isso, conseguimos provocar um engajamento fundamental para que ele valorize esta questão
+            da forma que ela merece.</p>
+          </p>
+        </div>
+      </div>
+  </div>
+
 {% endif %}
 
 {% endblock %}

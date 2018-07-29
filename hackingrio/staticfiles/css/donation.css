@@ -17,6 +17,10 @@ body {
   margin-bottom: 25%;
 }
 
+.portfolio-item-2 {
+  margin-top: 10%;
+}
+
 footer {
   bottom:0;
   position:absolute;
