@@ -21,7 +21,7 @@ django-extensions==2.1.0
 django-oauth-toolkit==1.2.0
 django-rest-auth==0.9.3
 django-widget-tweaks==1.4.2
-djangorestframework==3.8.2
+djangorestframework==3.11.2
 djongo==1.2.29
 entrypoints==0.2.3
 Eve==0.8
